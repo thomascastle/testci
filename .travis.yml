@@ -4,8 +4,9 @@ os:
 language: php
 
 before_script:
-  - composer self-update
+  - php -r "file_exists('.env') || copy('.env.example', '.env');"
   - composer install --no-interaction
+  - php artisan key:generate
 
 script:
   - vendor/bin/phpunit --coverage-text
