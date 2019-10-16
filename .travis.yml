@@ -3,6 +3,13 @@ os:
 
 language: php
 
+php:
+  - 7.2
+
+cache:
+  directories:
+    - vendor
+
 before_script:
   - php -r "file_exists('.env') || copy('.env.example', '.env');"
   - composer install --no-interaction
