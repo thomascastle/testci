@@ -80,6 +80,7 @@
             @endif
 
             <div class="content">
+                A Framework for Web Artisans
                 <div class="title m-b-md">
                     Laravel
                 </div>

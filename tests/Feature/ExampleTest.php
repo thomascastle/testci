@@ -18,4 +18,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testSeeTagLine()
+    {
+        $response = $this->get('/');
+
+        $response->assertSee('A Framework for Web Artisans');
+    }
 }
